@@ -1,13 +1,19 @@
 const express= require('express');
 const app = express();
 
-app.get('/',slash);
+let conta = 0;
+
+app.get('/',function (req,res) {
+res.sendFile(__dirname +'/public/index.html');
+});
+
+app.get('/seconda',function (req,res) {
+conta++;
+console.log(conta);
+res.sendFile(__dirname +'/public/seconda.html');
+});
 
 app.listen(process.env.PORT || 3000);
 
-function slash(req,res)
-{
-	res.write('hello');
-	res.end();
-}
+
  
