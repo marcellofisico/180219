@@ -4,7 +4,7 @@ const app = express();
 let conta = 0;
 
 app.get('/',function (req,res) {
-res.sendFile(__dirname +'/public/index.html');
+res.sendFile(__dirname +'/public/paginina.html');
 });
 
 app.get('/seconda',function (req,res) {
